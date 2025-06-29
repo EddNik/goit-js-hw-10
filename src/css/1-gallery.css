@@ -1,0 +1,31 @@
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 24px;
+  align-items: center;
+  justify-content: center;
+  max-width: 1128px;
+  margin: 24px 156px;
+  position: absolute;
+  top: 5%;
+  left: 11%;
+}
+
+.gallery-image {
+  width: 360px;
+}
+
+.gallery-image:hover {
+  cursor: pointer;
+}
+
+.sl-overlay {
+  background-color: rgba(46, 47, 66);
+}
+
+.sl-wrapper .sl-close,
+.sl-wrapper .sl-counter,
+.sl-wrapper .sl-navigation button {
+  color: #fff;
+}
