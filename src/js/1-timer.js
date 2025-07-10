@@ -23,8 +23,8 @@ const izi = {
   messageColor: 'white',
   backgroundColor: '#ef4040',
   message: 'Please choose a date in the future',
-  position: 'topCenter',
-  iconUrl: 'img/svg/bi_x-octagon.svg',
+  position: 'topRight',
+  iconUrl: '../../src/img/svg/bi_x-octagon.svg',
   closeOnEscape: true,
   transitionIn: 'bounceInUp',
 };

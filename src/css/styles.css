@@ -114,7 +114,7 @@ button:hover:not(.disabled) {
 }
 
 .iziToast-close {
-  left: 3.5px;
+  left: 0;
 }
 
 .disabled {
