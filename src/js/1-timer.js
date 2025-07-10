@@ -6,6 +6,7 @@ import 'izitoast/dist/css/iziToast.min.css';
 
 const startBtn = document.querySelector('.is-active');
 const dataObjects = document.querySelectorAll('span');
+const inputCalendar = document.querySelector('#datetime-picker');
 
 let selectedTime = 0;
 let currentTime = 0;
@@ -50,12 +51,15 @@ const onClick = event => {
   startBtn.classList.add('disabled');
   startBtn.setAttribute('disabled', true);
 
+  inputCalendar.classList.add('disabled');
+
   const currentTime = new Date().getTime();
   let countTime = selectedTime - currentTime;
 
   const intervalId = setInterval(() => {
     if (countTime < 1000) {
       clearInterval(intervalId);
+      inputCalendar.classList.remove('disabled');
       console.log(`Interval with id ${intervalId} has stopped!`);
     }
     convertObject = convertMs(countTime);
