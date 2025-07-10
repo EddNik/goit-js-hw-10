@@ -10,6 +10,7 @@ const inputCalendar = document.querySelector('#datetime-picker');
 
 document.addEventListener('DOMContentLoaded', function () {
   startBtn.disabled = true;
+  startBtn.classList.add('disabled');
 });
 
 let selectedTime = 0;
@@ -36,29 +37,24 @@ const options = {
   onClose: function (selectedDates) {
     selectedTime = new Date(selectedDates[0]).getTime();
     currentTime = new Date().getTime();
+
     if (selectedTime > currentTime) {
       startBtn.disabled = false;
-      // startBtn.classList.remove('disabled');
-      // startBtn.removeAttribute('disabled');
+      startBtn.classList.remove('disabled');
     } else {
       startBtn.disabled = true;
-      // startBtn.classList.add('disabled');
-      // startBtn.setAttribute('disabled', true);
+      startBtn.classList.add('disabled');
       iziToast.error(izi);
     }
   },
 };
 
-const fp = flatpickr('#datetime-picker', options);
-// fp.toggle();
+flatpickr('#datetime-picker', options);
 
 const onClick = event => {
   event.preventDefault();
   startBtn.disabled = true;
-  // startBtn.classList.add('disabled');
-  // startBtn.setAttribute('disabled', true);
-
-  // inputCalendar.classList.add('disabled');
+  startBtn.classList.add('disabled');
   inputCalendar.disabled = true;
 
   const currentTime = new Date().getTime();
@@ -67,10 +63,10 @@ const onClick = event => {
   const intervalId = setInterval(() => {
     if (countTime < 1000) {
       clearInterval(intervalId);
-      // inputCalendar.classList.remove('disabled');
       inputCalendar.disabled = false;
       console.log(`Interval with id ${intervalId} has stopped!`);
     }
+
     convertObject = convertMs(countTime);
     countTime -= 1000;
 
