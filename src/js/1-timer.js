@@ -18,13 +18,13 @@ let currentTime = 0;
 let convertObject = {};
 
 const izi = {
-  timeout: 20000,
+  timeout: 2500,
   theme: 'dark',
   messageColor: 'white',
   backgroundColor: '#ef4040',
   message: 'Please choose a date in the future',
   position: 'topRight',
-  iconUrl: './src/img/svg/bi_x-octagon.svg',
+  iconUrl: '/img/svg/bi_x-octagon.svg',
   closeOnEscape: true,
   transitionIn: 'bounceInUp',
 };

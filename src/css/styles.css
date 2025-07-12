@@ -30,10 +30,7 @@ a {
 
 body {
   margin: 16px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
-    'Open Sans', 'Helvetica Neue', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Montserrat', sans-serif;
   background-color: #fafafa;
   color: #212121;
   line-height: 1.5;
@@ -104,7 +101,7 @@ button:hover:not(.disabled) {
   font-weight: 400;
   font-size: 40px;
   line-height: 1.2;
-  font-family: 'Montserrat', sans-serif;
+  font-family: inherit;
   letter-spacing: 0.04em;
   color: #2e2f42;
 }
@@ -121,8 +118,75 @@ button:hover:not(.disabled) {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-  font-family: 'Montserrat', sans-serif;
+  font-family: inherit;
   letter-spacing: 0.04em;
   color: #989898;
   pointer-events: none;
+}
+
+.form {
+  position: absolute;
+  left: 156px;
+  top: 36px;
+  width: 360px;
+}
+
+.form button {
+  height: 40px;
+  background-color: #4e75ff;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  color: #fff;
+  margin-top: 24px;
+  width: 100%;
+}
+
+label:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.form input {
+  height: 40px;
+  margin: 0;
+  width: 100%;
+}
+
+/* input[type='number'] {
+  height: 40px;
+  margin: 0;
+  width: 100%;
+} */
+
+fieldset {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 48px;
+  width: 100%;
+  padding: 0;
+}
+
+legend {
+  margin-left: 28px;
+}
+
+/* input[type='radio'] {
+  width: 100%;
+  height: 40px;
+  margin: 0;
+} */
+
+fieldset > label {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 8px;
 }
