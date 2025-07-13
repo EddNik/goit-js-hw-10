@@ -9,7 +9,6 @@ const dataObjects = document.querySelectorAll('span');
 const inputCalendar = document.querySelector('#datetime-picker');
 
 document.addEventListener('DOMContentLoaded', function () {
-  startBtn.disabled = true;
   startBtn.classList.add('disabled');
 });
 
@@ -18,14 +17,15 @@ let currentTime = 0;
 let convertObject = {};
 
 const izi = {
-  timeout: 2500,
-  theme: 'dark',
+  timeout: 5000,
   messageColor: 'white',
   backgroundColor: '#ef4040',
   message: 'Please choose a date in the future',
   position: 'topRight',
-  iconUrl: '/img/svg/bi_x-octagon.svg',
-  closeOnEscape: true,
+  // iconUrl: '/img/svg/bi_x-octagon.svg',
+  iconUrl: 'https://icons.iconarchive.com/icons/bogo-d/project/32/Error-icon.png',
+  close: false,
+  closeOnClick: true,
   transitionIn: 'bounceInUp',
 };
 
